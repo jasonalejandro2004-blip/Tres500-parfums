@@ -1,0 +1,17 @@
+# Ignore system files and common folders
+.vscode/
+.DS_Store
+Thumbs.db
+node_modules/
+*.log
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# ngrok
+/ngrok.log
+
+# PowerShell session files
+PSScriptAnalyzerCache*

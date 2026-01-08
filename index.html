@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tres500 Parfums</title>
+    <meta property="og:title" content="Tres500 Parfums">
+    <meta property="og:site_name" content="Tres500 Parfums">
+    <meta property="og:description" content="Catálogo de perfumes Tres500 Parfums">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar-top">
+            <div class="logo">
+                <i class="fa-solid fa-gem"></i> Tres500 Parfums
+            </div>
+            <div class="social-links">
+                <a id="share-link" href="#" class="share-btn">Tres500 Parfums</a>
+                <a href="#instagram-section"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/504XXXXXXXX" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        
+        <div class="hero-search">
+            <h1>Encuentra tu esencia</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar loción por nombre...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProducts('all')">Todo</button>
+            <button class="filter-btn" onclick="filterProducts('hombre')">Caballero</button>
+            <button class="filter-btn" onclick="filterProducts('mujer')">Dama</button>
+            <button class="filter-btn" onclick="filterProducts('unisex')">Unisex</button>
+        </div>
+
+        <div id="product-grid" class="product-grid">
+            </div>
+    </main>
+
+    <footer id="instagram-section">
+        <div class="footer-content">
+            <div class="qr-section">
+                <div class="qr-placeholder">
+                    <i class="fa-solid fa-qrcode"></i>
+                    <p>Escanea para Instagram</p>
+                </div>
+                <a href="https://instagram.com/tu_usuario" target="_blank" class="insta-btn">
+                    <i class="fa-brands fa-instagram"></i> Síguenos @OdysseyStore
+                </a>
+            </div>
+            <div class="contact-info">
+                <h3>Contáctanos</h3>
+                <p>Envíos a todo Honduras</p>
+                <a href="https://wa.me/504XXXXXXXX" class="whatsapp-main-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Chatear en WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Odyssey Store Honduras
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
