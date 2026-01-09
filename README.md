@@ -1,4 +1,40 @@
-# Tres500 Parfums
+# Tres500 Parfums — Sitio estático
+
+Este repositorio contiene un sitio estático (HTML/CSS/JS) listo para publicarse en GitHub Pages, Netlify o Vercel.
+
+Guía rápida de despliegue
+
+- GitHub Pages (opción simple):
+  1. Ve a la configuración del repositorio > Pages.
+  2. Selecciona la rama `main` (o `master`) y la carpeta `/ (root)` como fuente.
+  3. Guarda. GitHub servirá `index.html` automáticamente.
+
+- GitHub Pages (despliegue automático mediante Action):
+  - Este repositorio incluye una GitHub Action que despliega el contenido del repositorio a la rama `gh-pages` cuando haces push a `main` o `master`.
+  - No se requiere token adicional; la acción usa `GITHUB_TOKEN` automáticamente.
+
+- Netlify / Vercel:
+  - Conecta el repositorio desde el panel de Netlify o Vercel; ellos detectan sitio estático y publican automáticamente.
+  - También puedes arrastrar la carpeta al panel de Netlify (Drag & Drop).
+
+Consejos para que el sitio funcione correctamente
+
+- Mantén las rutas a `styles.css`, `script.js` e imágenes en rutas relativas (ya configuradas).
+- Asegúrate de subir la carpeta `imagenes-productos/` con las imágenes usadas.
+- Si tienes nombres de archivos con espacios o caracteres raros, renómbralos con guiones o guiones bajos.
+
+Previsualización local
+
+Usa un servidor local simple para ver el sitio:
+
+```powershell
+# con Python 3
+python -m http.server 8000
+# o con npm
+npx serve .
+```
+
+Si quieres que yo también despliegue o ajuste algo (favicon, SEO, rutas), dime qué modificar y lo hago.# Tres500 Parfums
 
 Sitio estático listo para publicar en GitHub Pages.
 
