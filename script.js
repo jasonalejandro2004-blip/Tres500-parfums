@@ -61,7 +61,7 @@ const moreProducts = [
     { id: 13, name: "Maison Alhambra Kismet Magic EDP (Unisex) / 100ml", category: "hombre", price: 1200, image: "imagenes-productos/FullSizeRender_e75d03c3-a058-4020-bf54-def3e57ad647.webp" },
     { id: 14, name: "Lattafa Yara EDP (Dama) / 100ml", category: "mujer", price: 1400, image: "imagenes-productos/perfume-lattafa-yara-eau-de-parfum-w-100-ml-1-prive-perfumes.webp" },
     { id: 15, name: "Armaf Eter Arabian Sky EDP (Caballero) / 100ml", category: "hombre", price: 2500, image: "imagenes-productos/Disenosintitulo_20.webp" },
-    { id: 16, name: "Armaf Odyssey Homme White EDP (Caballero) / 100ml", category: "hombre", price: 1600, image: "C:\\pagiona web version 2\\imagenes-productos\\armaf-odyssey-white-edp-m-1-prive-perfumes_1972d2cf.webp" },
+    { id: 16, name: "Armaf Odyssey Homme White EDP (Caballero) / 100ml", category: "hombre", price: 1600, image: "imagenes-productos/armaf-odyssey-white-edp-m-1-prive-perfumes_1972d2cf.webp" },
     { id: 17, name: "Armaf Odyssey Aqua EDP (Caballero) / 100ml", category: "hombre", price: 1600, image: "imagenes-productos/perfume-armaf-odyssey-aqua-edp-m-100-ml-1-prive-perfumes.webp" },
     { id: 18, name: "Lattafa Pride Art of Universe EDP (Unisex) / 100ml", category: "unisex", price: 2500, image: "imagenes-productos/610JOMcHJDL._AC_UF1000_1000_QL80.webp" },
     { id: 19, name: "Lattafa Ramz EDP (Unisex) / 100ml", category: "unisex", price: 1000, image: "imagenes-productos/perfume-lattafa-ramz-gold-edp-u-100-ml-1-prive-perfumes.webp" },
