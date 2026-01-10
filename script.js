@@ -54,7 +54,7 @@ const products = [
 const moreProducts = [
     { id: 7, name: "Al Haramain Amber Oud Gold Edition EDP", category: "unisex", price: 2000, image: "imagenes-productos/IMG_3561.webp" },
     { id: 8, name: "Maison Alhambra Glacier Bold EDP", category: "hombre", price: 1400, image: "imagenes-productos/473513.webp" },
-    { id: 9, name: "Nocturne Oud", category: "hombre", price: 2200, image: "imagenes-productos/placeholder.svg" },
+    { id: 9, name: "Rasasi Hawas for Him EDP (Caballero) / 100ml", category: "hombre", price: 2200, image: "imagenes-productos/perfume-rasasi-hawas-edp-m-100-ml-1-prive-perfumes.webp" },
     { id: 10, name: "Lattafa Fakhar Rose EDP (Dama) ", category: "mujer", price: 1400, image: "imagenes-productos/perfume-lattafa-fakhar-edp-w-100-ml-1-prive-perfumes.webp" },
     { id: 11, name: "Emper Discovery Set EDP (Unisex)", category: "unisex", price: 1100, image: "imagenes-productos/perfumes-mini-emper-mini-collection-u-4-pc-sp-4-x-30-ml-1-prive-perfumes.webp" },
     { id: 12, name: "Lattafa Ramz Silver EDP", category: "hombre", price: 1400, image: "imagenes-productos/Lattafa-Ramz-Silver-Edp-100ml-Unisex.webp" },
@@ -71,7 +71,7 @@ const moreProducts = [
     { id: 23, name: "Lattafa Qaed Al Fursan EDP (Unisex) / 90ml", category: "hombre", price: 1550, image: "imagenes-productos/perfume-lattafa-qaed-al-fursan-edp-u-90-ml-1-prive-perfumes.webp" },
     { id: 24, name: "Lattafa Hayaati Al Maleky EDP (Caballero) / 100ml", category: "mujer", price: 1850, image: "imagenes-productos/perfume-lattafa-hayaati-al-maleky-edp-u-100-ml-1-prive-perfumes.webp" },
     { id: 25, name: "Lattafa Rave Now EDP (Unisex) / 100ml", category: "unisex", price: 1600, image: "imagenes-productos/IMG-2795.webp" },
-    { id: 26, name: "Lattafa Pride Ishq Al Shuyukh Silver EDP (Unisex) / 100ml", category: "unisex", price: 1400, image: "imagenes-productos/1_8c625750-3ac6-4bfd-a63d-c6e5db269256 (1).webp" },
+    { id: 26, name: "Lattafa Pride Ishq Al Shuyukh Silver EDP (Unisex) / 100ml", category: "unisex", price: 1400, image: "imagenes-productos/1_8c625750-3ac6-4bfd-a63d-c6e5db269256 (2).webp" },
     { id: 27, name: "Lattafa Bade'e Al Oud Honor & Glory EDP (Unisex) / 100ml", category: "unisex", price: 1500, image: "imagenes-productos/7AB4678F-9521-4198-87D1-C33750C0841C.webp" },
     { id: 28, name: "Lattafa Najdia Intense EDP (Unisex) / 100ml", category: "unisex", price: 1400, image: "imagenes-productos/perfume-lattafa-najdia-intense-edp-m-100-ml-1-prive-perfumes.webp" },
     { id: 29, name: "Lattafa Maahir Legacy EDP (Unisex) / 100ml", category: "hombre", price: 1600, image: "imagenes-productos/perfume-lattafa-maahir-legacy-edp-m-100-ml-1-prive-perfumes_07239ba7-a68e-4a79-b66f-6d0d97a59f3a.webp" },
