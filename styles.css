@@ -1,3 +1,73 @@
+/* --- RESPONSIVE PARA TELÉFONOS --- */
+@media (max-width: 600px) {
+    .navbar-top {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+        gap: 10px;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+    .hero-search h1 {
+        font-size: 1.3rem;
+    }
+    .search-container {
+        max-width: 100%;
+        padding: 5px 10px;
+    }
+    .container {
+        padding: 0 5px;
+    }
+    .filters {
+        gap: 5px;
+        margin-bottom: 1rem;
+    }
+    .filter-btn {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .img-container {
+        height: 180px;
+        padding: 8px;
+    }
+    .card-info {
+        padding: 10px;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+    .card-price {
+        font-size: 1.1rem;
+    }
+    .btn-whatsapp {
+        padding: 8px;
+        font-size: 1rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+    .qr-placeholder {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 5px;
+    }
+    .insta-btn {
+        font-size: 1rem;
+    }
+    .whatsapp-main-btn {
+        padding: 6px 12px;
+        font-size: 1rem;
+    }
+    footer {
+        padding: 2rem 0.5rem;
+    }
+}
 :root {
     --mandarin-main: #ff6f00;      /* Naranja Profundo */
     --mandarin-light: #ff9e40;     /* Naranja Claro */
