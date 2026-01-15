@@ -71,16 +71,16 @@ const moreProducts = [
     { id: 23, name: "Lattafa Qaed Al Fursan EDP (Unisex) / 90ml", category: "hombre", price: 1500, image: "imagenes-productos/perfume-lattafa-qaed-al-fursan-edp-u-90-ml-1-prive-perfumes.webp" },
     { id: 24, name: "Lattafa Hayaati Al Maleky EDP (Caballero) / 100ml", category: "mujer", price: 1500, image: "imagenes-productos/perfume-lattafa-hayaati-al-maleky-edp-u-100-ml-1-prive-perfumes.webp" },
     { id: 25, name: "Lattafa Rave Now EDP (Unisex) / 100ml", category: "unisex", price: 1500, image: "imagenes-productos/IMG-2795.webp" },
-    { id: 26, name: "Lattafa Pride Ishq Al Shuyukh Silver EDP (Unisex) / 100ml", category: "unisex", price: 1500, image: "c:\imagenes productos\s-l225.jpg" },
+    { id: 26, name: "Lattafa Pride Ishq Al Shuyukh Silver EDP (Unisex) / 100ml", category: "unisex", price: 1500, image: "imagenes-productos/s-l225.webp" },
     { id: 27, name: "Lattafa Bade'e Al Oud Honor & Glory EDP (Unisex) / 100ml", category: "unisex", price: 1500, image: "imagenes-productos/7AB4678F-9521-4198-87D1-C33750C0841C.webp" },
     { id: 28, name: "Lattafa Najdia Intense EDP (Unisex) / 100ml", category: "unisex", price: 1400, image: "imagenes-productos/perfume-lattafa-najdia-intense-edp-m-100-ml-1-prive-perfumes.webp" },
     { id: 29, name: "Lattafa Maahir Legacy EDP (Unisex) / 100ml", category: "hombre", price: 1500, image: "imagenes-productos/perfume-lattafa-maahir-legacy-edp-m-100-ml-1-prive-perfumes_07239ba7-a68e-4a79-b66f-6d0d97a59f3a.webp" },
     { id: 30, name: "Lattafa Khamrah Qahwa EDP (Unisex) / 100ml", category: "mujer", price: 2000, image: "imagenes-productos/IMG-2796.webp" },
     { id: 31, name: "Armaf Tag Him Uomo Nero EDP (Caballero) / 100ml", category: "hombre", price: 1500, image: "imagenes-productos/Publicacion_18.webp" },
-    { id: 32, name: "Armaf Club de Nuit Precieux IV Extrait (Dama) / 55ml", category: "dama", price: 2350, image: "imagenes-productos/perfume-armaf-club-de-nuit-precieux-iv-mujer-55ml-extrait (1).webp" },
+    { id: 32, name: "Armaf Club de Nuit Precieux IV Extrait (Dama) / 55ml", category: "dama", price: 2350, image: "imagenes-productos/Club-De-Nuit-Precieux-IV-Aromatica-CR-457578813.webp" },
     { id: 33, name: "Afnan 9AM Dive EDP (Unisex) / 100 ml", category: "unisex", price: 1600, image: "imagenes-productos/perfume-afnan-9am-dive-edp-u-100-ml-1-prive-perfumes_239dfff9-f5ee-4eb0-a9ea-0bafdf9e303d.webp" },
     { id: 34, name: "Maison Alhambra Glacier Le Noir EDP (Caballero) / 100ml", category: "unisex", price: 1400, image: "imagenes-productos/477817.webp" },
-    { id: 35, name: "Armaf Odyssey Mega EDP (Caballero) / 100ml", category: "hombre", price: 1600, image: "c:\imagenes productos\Perfume-Armaf-Odyssey-Mega-EDP-M-100-ml_e94529dc-31ae-434d-9ac4-9cf968e442e8.webp" },
+    { id: 35, name: "Armaf Odyssey Mega EDP (Caballero) / 100ml", category: "hombre", price: 1600, image: "imagenes-productos/Perfume-Armaf-Odyssey-Mega-EDP-M-100-ml_e94529dc-31ae-434d-9ac4-9cf968e442e8.webp" },
     { id: 36, name: "Lattafa Yara Candy EDP (Dama) / 100ml", category: "mujer", price: 1400, image: "imagenes-productos/perfume-lattafa-yara-candy-edp-w-100-ml-1-prive-perfumes.webp" }
 ];
 
