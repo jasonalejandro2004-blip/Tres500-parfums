@@ -1,218 +1,191 @@
-// CONFIGURACIÓN: Pon aquí tu número de Honduras
-// Formato: 504 + número sin espacios (ej. 50499998888)
-const MY_PHONE_NUMBER = "50495800770"; 
+const PRODUCT_CATEGORIES = {
+    tecnologia: 'Tecnología',
+    autos: 'Accesorios para auto',
+    gorras: 'Gorras',
+    joyeria: 'Joyería y accesorios',
+    camisas: 'Camisas deportivas',
+    calzado_dama: 'Calzado de dama',
+    calzado_caballero: 'Calzado de caballero',
+    novedades: 'Novedades'
+};
 
-// TUS PRODUCTOS (Puedes agregar tantos como quieras)
-// Nota: En 'image', pon el nombre de tu archivo jpg. Ej: "armaf.jpg"
-const products = [
-    {
-        id: 1,
-        name: "Armaf Odyssey Mandarin Sky",
-        category: "hombre",
-        price: 1500, // Precio en LPS
-        image: "imagenes-productos/armaf-mens-odyssey-mandarin-sky-edp-34-oz-fragrances-6294015149371_295c2585-7ae8-4d75-b740-2ddf0890899a.jpg"
-    },
-    {
-        id: 2,
-        name: "Set Armaf Club de Nuit Intense",
-        category: "hombre",
-        price: 2200,
-        image: "imagenes-productos/6294015105247-1.webp"
-    },
-    {
-        id: 3,
-        name: "Lattafa Fakhar Black EDP",
-        category: "hombre",
-        price: 1400,
-        image: "imagenes-productos/perfume-lattafa-fakhar-edp-m-100-ml-1-prive-perfumes.webp"
-    },
-    {
-        id: 4,
-        name: "Armaf Odyssey Spectra EDP",
-        category: "hombre",
-        price: 1500,
-        image: "imagenes-productos/perfume-armaf-odyssey-spectra-edp-m-100-ml-1-prive-perfumes.webp"
-    },
-    {
-        id: 5,
-        name: "Bharara Mast Perfume Rome Pour Homme EDP",
-        category: "hombre",
-        price: 2100,
-        image: "imagenes-productos/perfume-bharara-mast-perfume-rome-edp-m-100-ml-1-prive-perfumes.webp"
-    },
-    {
-        id: 6,
-        name: "Lattafa Rave Now White EDP",
-        category: "unisex",
-        price: 1500,
-        image: "imagenes-productos/perfume-lattafa-rave-now-white-edp-u-100-ml-1-prive-perfumes.webp"
-    }
-    
+// Completa name y price para cada foto; cada objeto representa una tarjeta del catálogo.
+const productSlots = [
+    { name: 'Leds Para Carros ', category: 'tecnologia', price: '1500', image: 'fotos frontales/catalogo/20260920_163614.jpg' },
+    { name: 'Magsafe Lisen 20w para carro', category: 'autos', price: '700', image: 'fotos frontales/catalogo/20260920_170442.jpg' },
+    { name: 'Ugreen UNO RG 30W', category: 'tecnologia', price: ' 800 ', image: 'fotos frontales/catalogo/20260920_171110.jpg' },
+    { name: 'UGREEN FINDER PRO Rastreadores', category: 'tecnologia', price: ' 600 ', image: 'fotos frontales/catalogo/20260920_172015.jpg' },
+    { name: 'Billeteras Minimalistas ', category: 'joyeria', price: '600', image: 'fotos frontales/catalogo/20260920_172552(1).jpg' },
+    { name: 'LEGO NISSAN SKYLINE', category: 'autos', price: '1300', image: 'fotos frontales/catalogo/20260920_180529.jpg' },
+    { name: 'COOLER GAMING PARA TELEFONO ', category: 'tecnologia', price: '600', image: 'fotos frontales/catalogo/20260920_180728(1).jpg' },
+    { name: 'LEGO MERCEDES AMG F1', category: 'autos', price: '1300', image: 'fotos frontales/catalogo/20260920_180831.jpg' },
+    { name: 'EXPANSOR USB UGREEN 4 PUERTOS', category: 'tecnologia', price: '500', image: 'fotos frontales/catalogo/20260920_182618.jpg' },
+    { name: 'SET DE MICROFONO LEVIN', category: 'autos', price: '600', image: 'fotos frontales/catalogo/20260920_183110.jpg' },
+    { name: 'AMAZON ECHO AUTO', category: 'autos', price: '900', image: 'fotos frontales/catalogo/20260920_195234.jpg' },
+    { name: 'CARGADOR ANKER 20W TIPO C A C ', category: 'tecnologia', price: '500', image: 'fotos frontales/catalogo/20260920_195330.jpg' },
+    { name: 'CALCETINES NIKE 6 PARES ORIGINALES', category: 'novedades', price: '700', image: 'fotos frontales/catalogo/20260920_195437.jpg' },
+    { name: 'LENTES PRADA ESTILO PLAYA', category: 'joyeria', price: '1500', image: 'fotos frontales/catalogo/20260920_201520(2).jpg' },
+    { name: 'LENTESD DE SOL PRADA', category: 'joyeria', price: '1500', image: 'fotos frontales/catalogo/20260920_201656(1).jpg' },
+    { name: 'CAMISA BARCELONA MORADA PLAYER', category: 'camisas', price: '1200', image: 'fotos frontales/catalogo/20261018_083149.jpg' },
+    { name: 'CAMISA REAL MADRID BLANCA PLAYER', category: 'camisas', price: '1200', image: 'fotos frontales/catalogo/20261018_083249.jpg' },
+    { name: 'GORRA SCARY MOVIE', category: 'gorras', price: '1200', image: 'fotos frontales/catalogo/20261026_165506.jpg' },
+    { name: 'GORRA YOSHI', category: 'gorras', price: '1200', image: 'fotos frontales/catalogo/20261026_165530.jpg' },
+    { name: 'GORRA RICO MUERTO 1', category: 'gorras', price: '1200', image: 'fotos frontales/catalogo/20261026_165552.jpg' },
+    { name: 'GORRA RICO MUERTO 2', category: 'gorras', price: '1200', image: 'fotos frontales/catalogo/20261026_165613.jpg' },
+    { name: 'GORRA LA TRES CREUS', category: 'gorras', price: '1200', image: 'fotos frontales/catalogo/20261026_165630.jpg' },
+    { name: 'SAMSUNG GALAXY WATCH 6 CLASSIC 47MM', category: 'tecnologia', price: '3500', image: 'fotos frontales/catalogo/20261028_005640.jpg' },
+    { name: 'ADIDAS ULTRABOOST X5 TALLA 11.5', category: 'calzado_caballero', price: '3000', image: 'fotos frontales/catalogo/20261030_204143.jpg' },
+    { name: 'LEGO MERCEDES 2', category: 'autos', price: '1300', image: 'fotos frontales/catalogo/20261030_204344.jpg' },
+    { name: 'LEGO NISSAN SKYLINE R34', category: 'autos', price: '1300', image: 'fotos frontales/catalogo/20261030_204446.jpg' },
+    { name: ' ZAPATOS ONCLOUD TALLA 11', category: 'calzado_caballero', price: '3200', image: 'fotos frontales/catalogo/20261030_204804.jpg' },
+    { name: 'PULSERA VAN CLEEF', category: 'tecnologia', price: '1600', image: 'fotos frontales/catalogo/20261030_205358.jpg' },
+    { name: 'VARIEDAD DE PULSERAS VAN CLEEFS', category: 'JOYAS', price: '1600', image: 'fotos frontales/catalogo/20261030_205638.jpg' },
+    { name: 'CAMISA VERDE AQUA BARCELONA', category: 'camisas', price: '1200', image: 'fotos frontales/catalogo/20261030_210236.jpg' },
+    { name: 'AUDIFONOS SOUNDCORE P30I ', category: 'tecnologia', price: '1300', image: 'fotos frontales/catalogo/IMG-20260317-WA0309.jpg' },
+    { name: 'BOMBILLOS INTELIGENTES RGB', category: 'tecnologia', price: '350', image: 'fotos frontales/catalogo/IMG-20260317-WA0351.jpg' },
+   
 ];
-
-// Añadimos 30 productos adicionales (ids 7..36) con formato igual a los primeros 6
-const moreProducts = [
-    { id: 7, name: "Al Haramain Amber Oud Gold Edition EDP", category: "unisex", price: 2000, image: "imagenes-productos/IMG_3561.webp" },
-    { id: 8, name: "Maison Alhambra Glacier Bold EDP", category: "hombre", price: 1400, image: "imagenes-productos/473513.webp" },
-    { id: 9, name: "Rasasi Hawas for Him EDP (Caballero) / 100ml", category: "hombre", price: 1600, image: "imagenes-productos/perfume-rasasi-hawas-edp-m-100-ml-1-prive-perfumes.webp" },
-    { id: 10, name: "Lattafa Fakhar Rose EDP (Dama) ", category: "mujer", price: 1400, image: "imagenes-productos/perfume-lattafa-fakhar-edp-w-100-ml-1-prive-perfumes.webp" },
-    { id: 11, name: "Emper Discovery Set EDP (Unisex)", category: "unisex", price: 1500, image: "imagenes-productos/perfumes-mini-emper-mini-collection-u-4-pc-sp-4-x-30-ml-1-prive-perfumes.webp" },
-    { id: 12, name: "Lattafa Ramz Silver EDP", category: "hombre", price: 1400, image: "imagenes-productos/Lattafa-Ramz-Silver-Edp-100ml-Unisex.webp" },
-    { id: 13, name: "Maison Alhambra Kismet Magic EDP (Unisex) / 100ml", category: "hombre", price: 1200, image: "imagenes-productos/FullSizeRender_e75d03c3-a058-4020-bf54-def3e57ad647.webp" },
-    { id: 14, name: "Lattafa Yara EDP (Dama) / 100ml", category: "mujer", price: 1400, image: "imagenes-productos/perfume-lattafa-yara-eau-de-parfum-w-100-ml-1-prive-perfumes.webp" },
-    { id: 15, name: "Armaf Eter Arabian Sky EDP (Caballero) / 100ml", category: "hombre", price: 2200, image: "imagenes-productos/Disenosintitulo_20.webp" },
-    { id: 16, name: "Armaf Odyssey Homme White EDP (Caballero) / 100ml", category: "hombre", price: 1500, image: "imagenes-productos/armaf-odyssey-white-edp-m-1-prive-perfumes_1972d2cf.webp" },
-    { id: 17, name: "Armaf Odyssey Aqua EDP (Caballero) / 100ml", category: "hombre", price: 1500, image: "imagenes-productos/perfume-armaf-odyssey-aqua-edp-m-100-ml-1-prive-perfumes.webp" },
-    { id: 18, name: "Lattafa Pride Art of Universe EDP (Unisex) / 100ml", category: "unisex", price: 2200, image: "imagenes-productos/610JOMcHJDL._AC_UF1000_1000_QL80.webp" },
-    { id: 19, name: "Lattafa Ramz EDP (Unisex) / 100ml", category: "unisex", price: 1400, image: "imagenes-productos/perfume-lattafa-ramz-gold-edp-u-100-ml-1-prive-perfumes.webp" },
-    { id: 20, name: "Maison Alhambra Jean Lowe Immortel (Unisex) EDP - 100ml", category: "hombre", price: 1400, image: "imagenes-productos/perfume-maison-alhambra-jean-lowe-fraiche-edp-m-100-ml-1-prive-perfumes.webp" },
-    { id: 21, name: "Armaf Odyssey Candee EDP (Dama) / 100ml", category: "mujer", price: 1500, image: "imagenes-productos/61SbbUuIStL._AC_UF1000_1000_QL80.webp" },
-    { id: 22, name: "Lattafa Pride Vintage Radio EDP (Unisex) / 100ml", category: "unisex", price: 2200, image: "imagenes-productos/01LATPVINRADIOEPUUN100.webp" },
-    { id: 23, name: "Lattafa Qaed Al Fursan EDP (Unisex) / 90ml", category: "hombre", price: 1500, image: "imagenes-productos/perfume-lattafa-qaed-al-fursan-edp-u-90-ml-1-prive-perfumes.webp" },
-    { id: 24, name: "Lattafa Hayaati Al Maleky EDP (Caballero) / 100ml", category: "mujer", price: 1500, image: "imagenes-productos/perfume-lattafa-hayaati-al-maleky-edp-u-100-ml-1-prive-perfumes.webp" },
-    { id: 25, name: "Lattafa Rave Now EDP (Unisex) / 100ml", category: "unisex", price: 1500, image: "imagenes-productos/IMG-2795.webp" },
-    { id: 26, name: "Lattafa Pride Ishq Al Shuyukh Silver EDP (Unisex) / 100ml", category: "unisex", price: 1500, image: "imagenes-productos/s-l225.webp" },
-    { id: 27, name: "Lattafa Bade'e Al Oud Honor & Glory EDP (Unisex) / 100ml", category: "unisex", price: 1500, image: "imagenes-productos/7AB4678F-9521-4198-87D1-C33750C0841C.webp" },
-    { id: 28, name: "Lattafa Najdia Intense EDP (Unisex) / 100ml", category: "unisex", price: 1400, image: "imagenes-productos/perfume-lattafa-najdia-intense-edp-m-100-ml-1-prive-perfumes.webp" },
-    { id: 29, name: "Lattafa Maahir Legacy EDP (Unisex) / 100ml", category: "hombre", price: 1500, image: "imagenes-productos/perfume-lattafa-maahir-legacy-edp-m-100-ml-1-prive-perfumes_07239ba7-a68e-4a79-b66f-6d0d97a59f3a.webp" },
-    { id: 30, name: "Lattafa Khamrah Qahwa EDP (Unisex) / 100ml", category: "mujer", price: 2000, image: "imagenes-productos/IMG-2796.webp" },
-    { id: 31, name: "Armaf Tag Him Uomo Nero EDP (Caballero) / 100ml", category: "hombre", price: 1500, image: "imagenes-productos/Publicacion_18.webp" },
-    { id: 32, name: "Armaf Club de Nuit Precieux IV Extrait (Dama) / 55ml", category: "dama", price: 2350, image: "imagenes-productos/Club-De-Nuit-Precieux-IV-Aromatica-CR-457578813.webp" },
-    { id: 33, name: "Afnan 9AM Dive EDP (Unisex) / 100 ml", category: "unisex", price: 1600, image: "imagenes-productos/perfume-afnan-9am-dive-edp-u-100-ml-1-prive-perfumes_239dfff9-f5ee-4eb0-a9ea-0bafdf9e303d.webp" },
-    { id: 34, name: "Maison Alhambra Glacier Le Noir EDP (Caballero) / 100ml", category: "unisex", price: 1400, image: "imagenes-productos/477817.webp" },
-    { id: 35, name: "Armaf Odyssey Mega EDP (Caballero) / 100ml", category: "hombre", price: 1600, image: "imagenes-productos/Perfume-Armaf-Odyssey-Mega-EDP-M-100-ml_e94529dc-31ae-434d-9ac4-9cf968e442e8.webp" },
-    { id: 36, name: "Lattafa Yara Candy EDP (Dama) / 100ml", category: "mujer", price: 1400, image: "imagenes-productos/perfume-lattafa-yara-candy-edp-w-100-ml-1-prive-perfumes.webp" }
-];
-
-products.push(...moreProducts);
 
 const grid = document.getElementById('product-grid');
 const searchInput = document.getElementById('searchInput');
+const categoryFilter = document.getElementById('categoryFilter');
+const productCount = document.getElementById('product-count');
 
-// Normaliza rutas de imagen para uso en web
-function getImageSrc(imagePath) {
-    if (!imagePath) return 'https://via.placeholder.com/300?text=Sin+Imagen';
-    // Si es URL absoluta, devolver tal cual
-    if (/^https?:\/\//i.test(imagePath)) return imagePath;
-    // Reemplaza backslashes por slashes
-    let p = imagePath.replace(/\\\\/g, '/').replace(/\\/g, '/');
-    // Elimina letra de unidad (C:, D:, etc.) si existe
-    p = p.replace(/^[a-zA-Z]:/, '');
-    // Quita barras al inicio
-    p = p.replace(/^\/+/, '');
-    // Toma sólo el nombre del archivo (último segmento)
-    const filename = p.split('/').pop().trim();
-    // Reemplaza espacios por guiones para nombres web-safe
-    const safe = filename.replace(/\s+/g, '-');
-    const final = 'imagenes-productos/' + safe;
-    console.info(`Image normalized: "${imagePath}" -> "${final}"`);
-    return final;
+function initializeCategoryFilter() {
+    Object.entries(PRODUCT_CATEGORIES).forEach(([value, label]) => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = label;
+        categoryFilter.appendChild(option);
+    });
 }
 
-// Función principal para renderizar
-function renderProducts(items) {
-    grid.innerHTML = "";
+function createProductCard(product) {
+    const card = document.createElement('article');
+    card.className = 'product-card';
 
-    if(items.length === 0) {
-        grid.innerHTML = "<p style='text-align:center; width:100%; col-span:3;'>No se encontraron productos.</p>";
+    const media = document.createElement('div');
+    media.className = 'product-image';
+    const fallback = document.createElement('div');
+    fallback.className = 'image-fallback';
+    fallback.innerHTML = '<i class="fa-solid fa-box-open" aria-hidden="true"></i><span>UrbanPlug HN</span>';
+    media.appendChild(fallback);
+
+    if (product.image) {
+        const image = document.createElement('img');
+        image.src = encodeURI(product.image);
+        image.alt = product.name.trim() || 'Foto del producto';
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        image.addEventListener('load', () => fallback.remove());
+        media.appendChild(image);
+    }
+
+    const details = document.createElement('div');
+    details.className = 'product-details';
+
+    const category = document.createElement('p');
+    category.className = 'product-category';
+    category.textContent = PRODUCT_CATEGORIES[product.category] || 'Novedades';
+
+    const name = document.createElement('h2');
+    name.className = 'product-name';
+    name.textContent = product.name.trim() || 'Nombre del producto';
+
+    details.append(category, name);
+
+    if (product.description) {
+        const description = document.createElement('p');
+        description.className = 'product-description';
+        description.textContent = product.description;
+        details.appendChild(description);
+    }
+
+    const price = document.createElement('p');
+    price.className = 'product-price';
+    const hasPrice = product.price !== '' && product.price !== null;
+    price.textContent = hasPrice
+        ? `L ${Number(product.price).toLocaleString('es-HN')}`
+        : 'Precio por agregar';
+    if (!hasPrice) price.classList.add('product-price-placeholder');
+    details.appendChild(price);
+
+    const message = `Hola, me interesa ${product.name.trim() || 'este producto'}. ¿Me confirmas el precio y disponibilidad?`;
+    const orderLink = document.createElement('a');
+    orderLink.className = 'order-link';
+    orderLink.href = `https://wa.me/50495800770?text=${encodeURIComponent(message)}`;
+    orderLink.target = '_blank';
+    orderLink.rel = 'noopener';
+    orderLink.innerHTML = '<i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar';
+    details.appendChild(orderLink);
+
+    card.append(media, details);
+    return card;
+}
+
+function renderProducts() {
+    const products = productSlots.filter(product => product.image);
+    const searchTerm = searchInput.value.trim().toLocaleLowerCase('es');
+    const selectedCategory = categoryFilter.value;
+    const visibleProducts = products.filter(product => {
+        const matchesSearch = `${product.name} ${product.description}`
+            .toLocaleLowerCase('es')
+            .includes(searchTerm);
+        const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
+
+    productCount.textContent = `${products.length} productos`;
+    grid.replaceChildren();
+
+    if (!visibleProducts.length) {
+        const emptyState = document.createElement('div');
+        emptyState.className = 'catalog-empty';
+
+        const title = document.createElement('h2');
+        title.textContent = products.length ? 'No encontramos productos' : 'Catálogo en preparación';
+
+        const message = document.createElement('p');
+        message.textContent = products.length
+            ? 'Prueba con otra búsqueda o categoría.'
+            : 'Estamos preparando los primeros productos de UrbanPlug HN.';
+
+        emptyState.append(title, message);
+        grid.appendChild(emptyState);
         return;
     }
 
-    items.forEach(product => {
-        const message = `Hola, me interesa la loción *${product.name}* que cuesta LPS ${product.price}. ¿Está disponible?`;
-        const whatsappLink = `https://wa.me/${MY_PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
-
-        const card = document.createElement('div');
-        card.classList.add('card');
-
-        // Imagen
-        const imgContainer = document.createElement('div');
-        imgContainer.classList.add('img-container');
-        const img = document.createElement('img');
-        img.alt = product.name;
-        // Normaliza rutas que vengan con backslashes, espacios o con letra de unidad
-        img.src = encodeURI(getImageSrc(product.image));
-        img.onerror = function() { this.src = 'https://via.placeholder.com/300?text=Sin+Imagen'; };
-        imgContainer.appendChild(img);
-
-        // Info
-        const info = document.createElement('div');
-        info.classList.add('card-info');
-        const title = document.createElement('h3');
-        title.classList.add('card-title');
-        title.textContent = product.name;
-        const price = document.createElement('div');
-        price.classList.add('card-price');
-        price.textContent = `LPS ${product.price.toLocaleString()}`;
-        const a = document.createElement('a');
-        a.href = whatsappLink;
-        a.target = '_blank';
-        a.classList.add('btn-whatsapp');
-        a.innerHTML = `<i class="fa-brands fa-whatsapp"></i> Pedir ahora`;
-
-        info.appendChild(title);
-        info.appendChild(price);
-        info.appendChild(a);
-
-        card.appendChild(imgContainer);
-        card.appendChild(info);
-
-        grid.appendChild(card);
-    });
+    visibleProducts.forEach(product => grid.appendChild(createProductCard(product)));
 }
 
-// Filtro por Categoría
-function filterProducts(category) {
-    // Actualizar botones visualmente
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if(btn.innerText.toLowerCase().includes(category === 'all' ? 'todo' : category)) {
-            btn.classList.add('active');
-        }
-    });
-
-    if (category === 'all') {
-        renderProducts(products);
-    } else {
-        const filtered = products.filter(p => p.category === category);
-        renderProducts(filtered);
-    }
-}
-
-// Búsqueda en tiempo real
-searchInput.addEventListener('input', (e) => {
-    const term = e.target.value.toLowerCase();
-    const filtered = products.filter(p => p.name.toLowerCase().includes(term));
-    renderProducts(filtered);
-});
-
-// Configura botón de compartir (navigator.share con fallback a portapapeles/WhatsApp)
 function setupShareButton() {
     const share = document.getElementById('share-link');
     if (!share) return;
-    share.addEventListener('click', (e) => {
-        e.preventDefault();
+
+    share.addEventListener('click', (event) => {
+        event.preventDefault();
         const url = window.location.href;
-        const title = 'Tres500 Parfums';
-        const text = 'Visita nuestro catálogo: ' + title;
+        const title = 'UrbanPlug HN';
+        const text = `Visita ${title}: ${url}`;
+
         if (navigator.share) {
             navigator.share({ title, text, url }).catch(() => {});
         } else if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(url).then(() => {
                 alert('Enlace copiado al portapapeles:\n' + url);
             }).catch(() => {
-                const wa = 'https://wa.me/?text=' + encodeURIComponent(text + ' ' + url);
-                window.open(wa, '_blank');
+                window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
             });
         } else {
-            const wa = 'https://wa.me/?text=' + encodeURIComponent(text + ' ' + url);
-            window.open(wa, '_blank');
+            window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
         }
     });
 }
 
-// Carga inicial
 document.addEventListener('DOMContentLoaded', () => {
-    renderProducts(products);
+    initializeCategoryFilter();
+    searchInput.addEventListener('input', renderProducts);
+    categoryFilter.addEventListener('change', renderProducts);
+    renderProducts();
     setupShareButton();
 });

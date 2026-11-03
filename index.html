@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tres500 Parfums</title>
-    <meta property="og:title" content="Tres500 Parfums">
-    <meta property="og:site_name" content="Tres500 Parfums">
-    <meta property="og:description" content="Catálogo de perfumes Tres500 Parfums">
+    <title>UrbanPlug HN</title>
+    <meta property="og:title" content="UrbanPlug HN">
+    <meta property="og:site_name" content="UrbanPlug HN">
+    <meta property="og:description" content="Tecnología, accesorios, moda y novedades en UrbanPlug HN.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -16,57 +16,70 @@
     <header>
         <div class="navbar-top">
             <div class="logo">
-                <i class="fa-solid fa-gem"></i> Tres500 Parfums
+                <i class="fa-solid fa-gem"></i> UrbanPlug HN
             </div>
             <div class="social-links">
-                <a id="share-link" href="#" class="share-btn">Tres500 Parfums</a>
-                <a href="#instagram-section"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/504XXXXXXXX" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a id="share-link" href="#" class="share-btn">Compartir</a>
+                <a href="https://wa.me/50495800770" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         
         <div class="hero-search">
-            <h1>Encuentra tu esencia</h1>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Buscar loción por nombre...">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            <h1>Tecnología, estilo y novedades</h1>
+            <p>Encuentra tus próximos favoritos en UrbanPlug HN.</p>
         </div>
     </header>
 
     <main class="container">
-        <div class="filters">
-            <button class="filter-btn active" onclick="filterProducts('all')">Todo</button>
-            <button class="filter-btn" onclick="filterProducts('hombre')">Caballero</button>
-            <button class="filter-btn" onclick="filterProducts('mujer')">Dama</button>
-            <button class="filter-btn" onclick="filterProducts('unisex')">Unisex</button>
-        </div>
+        <section class="catalog-tools" aria-label="Buscar productos">
+            <label class="search-container">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="search" id="searchInput" placeholder="Buscar productos" aria-label="Buscar productos">
+            </label>
+            <label class="category-select">
+                <span class="sr-only">Filtrar por categoría</span>
+                <select id="categoryFilter" aria-label="Filtrar por categoría">
+                    <option value="all">Todas las categorías</option>
+                </select>
+            </label>
+            <p id="product-count" class="product-count" aria-live="polite"></p>
+        </section>
 
-        <div id="product-grid" class="product-grid">
+        <section id="product-grid" class="product-grid" aria-live="polite" aria-label="Catálogo de productos">
+        </section>
+
+        <section class="fulfillment" aria-label="Opciones de pago y entrega">
+            <div>
+                <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
+                <span><strong>Pago contra entrega</strong><small>Pagas al recibir tu pedido</small></span>
             </div>
+            <div>
+                <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                <span><strong>Entrega personal</strong><small>Coordinamos contigo por WhatsApp</small></span>
+            </div>
+        </section>
     </main>
 
-    <footer id="instagram-section">
+    <footer>
         <div class="footer-content">
-            <div class="qr-section">
-                <div class="qr-placeholder">
-                    <img src="imagenes-productos/qr-instagram-perfuesencias_hn.png" alt="QR Instagram Perfuesencias_HN" style="width:120px; border-radius:16px;">
-                    <p>Escanea para Instagram</p>
-                </div>
-                <a href="https://instagram.com/perfuesencias_hn" target="_blank" class="insta-btn">
-                    <i class="fa-brands fa-instagram"></i> Síguenos @perfuesencias_hn
-                </a>
-            </div>
             <div class="contact-info">
                 <h3>Contáctanos</h3>
-                <p>Envíos a todo Honduras</p>
+                <p>Consulta disponibilidad de entrega por WhatsApp</p>
                 <a href="https://wa.me/50495800770" class="whatsapp-main-btn">
                     <i class="fa-brands fa-whatsapp"></i> Chatear en WhatsApp
                 </a>
             </div>
+            <div class="instagram-qr">
+                <h3>Síguenos en Instagram</h3>
+                <a href="https://www.instagram.com/luxury_hn1/" target="_blank" rel="noopener noreferrer"
+                   aria-label="Abrir Instagram de Luxury HN">
+                    <img src="fotos frontales/instagram-qr.png" alt="Código QR de Instagram: LUXURY_HN1">
+                </a>
+                <p>Escanea el código para ver novedades</p>
+            </div>
         </div>
         <div class="copyright">
-            &copy; 2026 Tres500 Parfums Honduras
+            &copy; 2026 UrbanPlug HN
         </div>
     </footer>
 

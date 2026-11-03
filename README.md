@@ -1,4 +1,4 @@
-# Tres500 Parfums — Sitio estático
+# UrbanPlug HN — Sitio estático
 
 Este repositorio contiene un sitio estático (HTML/CSS/JS) listo para publicarse en GitHub Pages, Netlify o Vercel.
 
@@ -31,10 +31,12 @@ Usa un servidor local simple para ver el sitio:
 # con Python 3
 python -m http.server 8000
 # o con npm
-npx serve .
+Guía rápida de despliegue
 ```
 
-Si quieres que yo también despliegue o ajuste algo (favicon, SEO, rutas), dime qué modificar y lo hago.# Tres500 Parfums
+Si quieres que yo también despliegue o ajuste algo (favicon, SEO, rutas), dime qué modificar y lo hago.
+
+# UrbanPlug HN
 
 Sitio estático listo para publicar en GitHub Pages.
 
@@ -63,7 +65,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 Si ya creaste el repo `tres500-parfums.github.io` en GitHub, puedes usar el script `git-publish.ps1` para inicializar y subir el proyecto.
 
 1. Abre PowerShell en la carpeta del proyecto.
-2. Ejecuta:
+# UrbanPlug HN
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
@@ -75,14 +77,18 @@ El script te pedirá la URL del remoto (ej: `https://github.com/tu_usuario/tres5
 > Nota: si GitHub solicita autenticación, usa `gh auth login` o crea un Personal Access Token y proporciónalo cuando se te pida la contraseña.
 
 ## Metadatos para compartir
-La página incluye meta tags Open Graph (`og:title`, `og:description`) para que al compartir se muestre "Tres500 Parfums".
+La página incluye meta tags Open Graph (`og:title`, `og:description`) para que al compartir se muestre "UrbanPlug HN".
 
 ## Estructura importante
 - `index.html` — página principal
 - `styles.css` — estilos
 - `script.js` — lógica y rutas de imágenes
-- `imagenes-productos/` — coloca aquí los archivos de imagen locales
+- `fotos frontales/catalogo/` — fotos optimizadas que usa el catálogo
 - `start-http-and-ngrok.ps1` — ayuda para crear una URL pública temporal con ngrok
 - `git-publish.ps1` — script para inicializar y publicar al repo remoto
 
 Si quieres, puedo ejecutar el script de publicación por ti desde aquí (necesitaré la URL remota o que autorices el `gh` CLI en tu máquina).
+
+## Actualizar el catálogo
+
+Las tarjetas y sus fotos se configuran en `script.js`, en el arreglo `productSlots`. Para publicar un artículo, completa `name` y `price` en su tarjeta; el precio se escribe como número, sin `L`. Las fotos optimizadas están en `fotos frontales/catalogo/`. La foto que muestra tres gorras está separada en tres tarjetas para que cada modelo tenga su propio nombre y precio.
